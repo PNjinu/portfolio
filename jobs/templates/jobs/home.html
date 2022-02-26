@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuria Pat</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#blogs">blogs</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="{% static 'images/home-pic.jpg' %}" alt="">
+        <h3> Patrick <span>N. Kuria</span> </h3>
+        <p> i am a <span class="typing-text"> front end developer </span> </p>
+        <a href="#about" class="btn">about me</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about <span>me</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="{% static 'images/about-pic.jpg' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h3> my name is <span> Patrick N. Kuria </span> </h3>
+            <p class="info">Technically gifted with a substantial amount of obsession with technology. 
+                Passionate about programming especially web development. Delivery is my one commandment. My interpersonal and communication skills are top notch but I still work on them each day because I believe that we can always improve. I also have a passion in design and art.</p>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> age: </span> 27 </p>
+                    <p> <span> gender: </span> male </p>
+                    <p> <span> experience  : </span> 4 years </p>
+                    <p> <span> freelance : </span> available </p>
+                </div>
+                <div class="box">
+                    <p> <span> language : </span> english / kiswahili</p>
+                    <p> <span> phone : </span> +254-728-108007 </p>
+                    <p> <span> email : </span> kuria144@gmail.com </p>
+                    <p> <span> address : </span> nairobi, kenya - 00100 </p>
+                </div>
+            </div>
+            <a href="#" class="btn">download CV</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> <span> my </span> services </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <i class="fas fa-code"></i>
+            <h3>web development</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-mobile"></i>
+            <h3>Responsive designs</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fab fa-wordpress"></i>
+            <h3>wordpress</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-ruler"></i>
+            <h3>database design</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-database"></i>
+            <h3>database administration</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-server"></i>
+            <h3>system administration</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+    <h1 class="heading"> <span> my </span> portfolio </h1>
+
+    <div class="box-container">
+        
+        {% for job in jobs %}
+        <div class="box tilt">
+            <img src="{{ job.image.url }}" alt="">
+            <div class="content">
+                <a href="{% url 'detail' job.id %}" class="btn">learn more</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> <span> my </span> blogs </h1>
+
+    <div class="box-container">
+
+        {% for blog in blogs %}
+        <div class="box tilt">
+            <img src="{{ blog.image.url }}" alt="">
+            <h3> {{ blog.title }} </h3>
+            <p>{{ blog.cont }}</p>
+            <a href="{{ blog.link }}" class="btn" target="_blank">learn more</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> contact <span> me </span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="{% static 'images/contact-img.svg' %}" alt="">
+        </div>
+
+        <form action="">
+
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+
+            <input type="text" placeholder="subject" class="box">
+
+            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" class="btn" value="send message">
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section  -->
+
+<div class="footer"> created by <a href="/"><span> Kuria Pat </span></a> | all rights reserved! </div>
+
+<!-- javascript part  -->
+
+<!-- typed.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<!-- particles.js links  -->
+<script src="{% static 'js/particles.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
+<!-- vanilla-tilt.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+var typed = new Typed('.typing-text', {
+    strings : ['front end developer', 'web designer', 'web developer', 'Database Administrator'],
+    loop : true,
+    typeSpeed : 150
+});
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+
+</body>
+</html>
