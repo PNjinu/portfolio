@@ -27,7 +27,9 @@
         <a href="#about">about</a>
         <a href="#services">services</a>
         <a href="#portfolio">portfolio</a>
+        {% if blogs %}
         <a href="#blogs">blogs</a>
+        {% endif %}
         <a href="#contact">contact</a>
     </nav>
 
@@ -163,7 +165,7 @@
 </section>
 
 <!-- portfolio section ends -->
-
+{% if blogs %}
 <!-- blogs section starts  -->
 
 <section class="blogs" id="blogs">
@@ -185,7 +187,7 @@
 </section>
 
 <!-- blogs section ends -->
-
+{% endif %}
 <!-- contact section starts  -->
 
 <section class="contact" id="contact">
