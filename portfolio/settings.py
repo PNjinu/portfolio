@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5k!c@8-3g*z0m%-upton@js0mpjj$t=0hi8h=xjsrij()#ed&7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kuriapat.dev', '159.65.16.117']
 
 
 # Application definition
