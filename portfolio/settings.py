@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5k!c@8-3g*z0m%-upton@js0mpjj$t=0hi8h=xjsrij()#ed&7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
+ALLOWED_HOSTS = ['127.0.0.1','159.65.16.117','kuriapat.dev','www.kuriapat.dev']
 
 
 # Application definition
