@@ -185,7 +185,7 @@
         <div class="image">
             <img class="tilt" src="{% static 'images/contact-img.svg' %}" alt="">
         </div>
-        <form id="form-contact" action="" method="post">
+        <form id="form-contact" action="#contact" method="post">
             {% csrf_token %}
             <div class="inputBox">
                 {{ form.name }}
