@@ -16,3 +16,16 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContactMessages(models.Model):
+    name = models.CharField(max_length=250)
+    email = models.EmailField()
+    subject = models.CharField(max_length=300)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
+
+    class  Meta: 
+        verbose_name_plural  =  "Contact Messages"

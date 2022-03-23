@@ -135,14 +135,14 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Email Configs for contact us - Test
-#DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #Email Configs for contact us - Sending actual emails
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
-EMAIL_HOST = 'smtp.sendgrid.net' # new
-EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = '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' # new
-EMAIL_PORT = 587 # new
-EMAIL_USE_TLS = True # new
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+#DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
+#EMAIL_HOST = 'smtp.sendgrid.net' # new
+#EMAIL_HOST_USER = 'apikey' # new
+#EMAIL_HOST_PASSWORD = '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' # new
+#EMAIL_PORT = 587 # new
+#EMAIL_USE_TLS = True # new
