@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5k!c@8-3g*z0m%-upton@js0mpjj$t=0hi8h=xjsrij()#ed&7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = True
-#ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
-ALLOWED_HOSTS = [] 
+DEBUG = False
+#DEBUG = True
+ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
+#ALLOWED_HOSTS = [] 
 
 # Application definition
 
@@ -135,14 +135,14 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Email Configs for contact us - Test
-DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #Email Configs for contact us - Sending actual emails
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-#DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
-#EMAIL_HOST = 'smtp.sendgrid.net' # new
-#EMAIL_HOST_USER = 'apikey' # new
-#EMAIL_HOST_PASSWORD = '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' # new
-#EMAIL_PORT = 587 # new
-#EMAIL_USE_TLS = True # new
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
+DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
+EMAIL_HOST = 'smtp.sendgrid.net' 
+EMAIL_HOST_USER = 'apikey' 
+EMAIL_HOST_PASSWORD = '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' # new
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True 
