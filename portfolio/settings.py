@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
 
 INSTALLED_APPS = [
     'jobs',
-    'sendemail.apps.SendemailConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
