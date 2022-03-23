@@ -23,15 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5k!c@8-3g*z0m%-upton@js0mpjj$t=0hi8h=xjsrij()#ed&7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
-
+#DEBUG = False
+DEBUG = True
+#ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
+ALLOWED_HOSTS = [] 
 
 # Application definition
 
 INSTALLED_APPS = [
     'jobs',
+    'sendemail.apps.SendemailConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -111,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -132,3 +133,16 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Email Configs for contact us - Test
+#DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#Email Configs for contact us - Sending actual emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+DEFAULT_FROM_EMAIL = 'admin@kurzsystems.com'
+EMAIL_HOST = 'smtp.sendgrid.net' # new
+EMAIL_HOST_USER = 'apikey' # new
+EMAIL_HOST_PASSWORD = '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' # new
+EMAIL_PORT = 587 # new
+EMAIL_USE_TLS = True # new
