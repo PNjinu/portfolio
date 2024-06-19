@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5k!c@8-3g*z0m%-upton@js0mpjj$t=0hi8h=xjsrij()#ed&7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = True
-ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
-#ALLOWED_HOSTS = [] 
+#DEBUG = False
+DEBUG = True
+#ALLOWED_HOSTS = ['159.65.16.117','kuriapat.dev','www.kuriapat.dev']
+ALLOWED_HOSTS = [] 
 
 # Application definition
 
@@ -75,14 +75,24 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'portfoliodb',
+#        'USER': 'portfoliouser',
+#        'PASSWORD': 'W@!r1MuU',
+#        'HOST': 'localhost',
+#        'PORT': '5432'
+#   }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfoliodb',
-        'USER': 'portfoliouser',
-        'PASSWORD': 'W@!r1MuU',
+        'NAME': 'fallbackdb',
+        'USER': 'fallbackuser',
+        'PASSWORD': 'FallbackP@ss',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '5432',
     }
 }
 
